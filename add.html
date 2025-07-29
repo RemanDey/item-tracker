@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Item - Item list</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <link rel="icon" type="png" href="logo.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="form-title"><i class="fas fa-plus"></i> Add New Item</h1>
+    <form id="item-form">
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option>Clothing and Accessories + Medicine</option>
+        <option>Bedding and Laundry</option>
+        <option>Cleaning Essentials</option>
+        <option>Stationery and Study Items</option>
+        <option>Electronics</option>
+        <option>Kitchen and Utensils</option>
+      </select>
+
+      <input type="text" id="item" placeholder="Item Name" required />
+
+      <div class="locations-inputs">
+        <label><input type="number" id="bag1" min="0" value="0" /> Bag1</label>
+        <label><input type="number" id="bag2" min="0" value="0" /> Bag2</label>
+        <label><input type="number" id="luggage" min="0" value="0" /> Luggage</label>
+        <label><input type="number" id="wear" min="0" value="0" /> Wear</label>
+      </div>
+
+      <textarea id="notes" placeholder="Optional notes..."></textarea>
+
+      <button type="submit"><i class="fas fa-save"></i> Save Item</button>
+    </form>
+
+    <br />
+    <button onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Back to List</button>
+  </div>
+
+  <script src="script.js"></script>
+<footer class="no-print footer">
+  <p>&copy; 2025 Reman Dey. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

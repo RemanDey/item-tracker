@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Item List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <link rel="icon" type="png" href="logo.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-boxes-stacked"></i> Item List</h1>
+
+    <!-- Navigation Section -->
+    <nav class="nav-bar no-print">
+      <button class="hamburger" onclick="toggleHamburger()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-actions" id="nav-actions">
+        <button onclick="window.location.href='add.html'">
+          <i class="fas fa-plus"></i> Add Item
+        </button>
+
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">
+            <i class="fas fa-tools"></i> Tools
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <button onclick="exportItems()"><i class="fas fa-file-export"></i> Export Excel</button>
+            <button onclick="document.getElementById('import-file').click()"><i class="fas fa-file-import"></i> Import Excel</button>
+            <button onclick="exportAsPDF()"><i class="fas fa-print"></i> Export PDF</button>
+            <button onclick="print()"><i class="fas fa-print"></i> Print</button>
+          </div>
+        </div>
+        <input type="file" id="import-file" accept=".xlsx" hidden />
+      </div>
+    </nav>
+
+    <input type="text" id="search" placeholder="Search items..." />
+
+    <table id="item-table">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+<footer class="no-print footer">
+  <p>&copy; 2025 Reman Dey. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
